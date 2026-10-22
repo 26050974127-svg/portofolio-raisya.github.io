@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Pribadi - Educational Technology Student</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Konfigurasi Kustom Tailwind
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+    }
+    .dark .glass-effect {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+  <header class="fixed top-0 left-0 w-full z-50 glass-effect border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo / Initial -->
+      <a href="#about" class="text-xl font-bold tracking-tight text-brand-600 dark:text-brand-500 flex items-center gap-2">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Portofolio</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+        <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">About Me</a>
+        <a href="#skills" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">What I Can Do</a>
+        <a href="#achievements" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Achievement</a>
+        <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <!-- Dark Mode Toggle Button -->
+        <button id="theme-toggle" type="button" class="p-2.5 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all" aria-label="Toggle Mode">
+          <i id="theme-toggle-dark-icon" class="hidden fa-solid fa-moon text-lg"></i>
+          <i id="theme-toggle-light-icon" class="hidden fa-solid fa-sun text-lg"></i>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2.5 text-slate-600 dark:text-slate-300 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-4 space-y-3">
+      <a href="#about" class="block py-2 px-3 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">About Me</a>
+      <a href="#skills" class="block py-2 px-3 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">What I Can Do</a>
+      <a href="#achievements" class="block py-2 px-3 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">Achievement</a>
+      <a href="#contact" class="block py-2 px-3 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    
+    <section id="about" class="py-20 md:py-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-12 gap-12 items-center">
+        
+        <!-- Profile Info -->
+        <div class="md:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 text-xs font-semibold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+            Mahasiswa Baru
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+            Halo, Saya <span class="text-brand-600 dark:text-brand-500">Au Raisyaidin Ilham Ramadhan</span>
+          </h1>
+
+          <div class="flex flex-wrap gap-4 text-sm font-medium text-slate-600 dark:text-slate-400">
+            <span class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+              <i class="fa-solid fa-id-card text-brand-500"></i>
+              NIM: 26050974127
+            </span>
+            <span class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+              <i class="fa-solid fa-book-bookmark text-brand-500"></i>
+              Prodi: Pendidikan Teknologi Informasi
+            </span>
+          </div>
+
+          <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            Mahasiswa baru yang memiliki ketertarikan mendalam di bidang <strong class="text-slate-900 dark:text-white">Pendidikan Teknologi Informasi (EdTech)</strong>. Meskipun belum memiliki pengalaman kerja formal, Saya siap belajar, beradaptasi, dan berkontribusi secara inovatif dalam menciptakan pengalaman belajar yang modern.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#contact" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold transition-all shadow-lg shadow-brand-500/25 flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Hubungi Saya
+            </a>
+            <a href="#" target="_blank" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 font-semibold transition-all flex items-center gap-2">
+              
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Avatar Placeholder / Photo -->
+        <div class="md:col-span-5 flex justify-center">
+          <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl bg-gradient-to-tr from-brand-600 to-indigo-600 p-1.5 shadow-2xl">
+            <div class="w-full h-full bg-slate-100 dark:bg-slate-800 rounded-[22px] flex flex-col items-center justify-center overflow-hidden relative group">
+              <!-- UBAH DATA: Ganti src gambar dengan foto Anda jika ada -->
+              <i class="fa-solid fa-user-graduate text-8xl text-brand-500/50 group-hover:scale-110 transition-transform duration-300"></i>
+              <img src="c:\Pictures\foto profil.png" alt="Au Raisyaidin Ilham Ramadhan">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-20 border-t border-slate-200 dark:border-slate-800 pt-12">
+        <h3 class="text-xl font-bold mb-8 text-slate-900 dark:text-white flex items-center gap-3">
+          <i class="fa-solid fa-school text-brand-500"></i> Riwayat Pendidikan
+        </h3>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Pendidikan 1 (Perguruan Tinggi) -->
+          <div class="p-6 bg-white dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-all">
+            <span class="text-xs font-bold text-brand-600 dark:text-brand-400">2026 - Sekarang</span>
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white mt-1">Universitas Negeri Surabaya (UNESA)</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Pendidikan Teknologi Informasi</p>
+            <p class="text-xs text-slate-500 dark:text-slate-500 mt-3">Aktif dalam kegiatan akademik dan pengembangan diri di bidang teknologi pembelajaran.</p>
+          </div>
+
+          <!-- Pendidikan 2 (SMA/SMK) -->
+          <div class="p-6 bg-white dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-all">
+            <span class="text-xs font-bold text-slate-400">2021 - 2026</span>
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white mt-1">SMK Muhammadiyah 1 Taman</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Teknik Komputer dan Jaringan</p>
+            <p class="text-xs text-slate-500 dark:text-slate-500 mt-3">Fokus Keahlian dalam mempelajari praktikum perangkat keras dan sistem operasi, serta Praktikum Jaringan Komputer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-slate-100/70 dark:bg-slate-800/30 border-y border-slate-200 dark:border-slate-800 transition-colors">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">What I Can Do</h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-3"></p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Skill Card 1 -->
+          <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/70 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl mb-5">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">EdTech & Digital Learning</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Memahami dasar konsep media pembelajaran digital, dan integrasi teknologi ke dalam kelas.</p>
+          </div>
+
+          <!-- Skill Card 2 -->
+          <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/70 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-5">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Pemrograman & SQL</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Memiliki logika pemrograman dasar serta kueri dasar SQL untuk pengolahan data sederhana.</p>
+          </div>
+
+          <!-- Skill Card 3 -->
+          <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/70 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl mb-5">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Desain Interaktif</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Mampu membuat desain dan presentasi menggunakan beberapa tools, seperti canva, Ms PPT, dan Coreldraw.</p>
+          </div>
+
+          <!-- Skill Card 4 -->
+          <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/70 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-5">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Soft Skills</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Adaptabilitas tinggi, komunikasi lancar, dan kerja sama tim.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Achievements</h2>
+        <p class="text-slate-600 dark:text-slate-400 mt-3"></p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- UBAH DATA: Achievement Card 1 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:shadow-xl transition-all group">
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-500 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-trophy text-lg"></i>
+            </div>
+            <span class="text-xs font-semibold text-slate-400">Prestasi Akademik</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 group-hover:text-brand-600 transition-colors">Uji Kompetensi Keahlian</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Mengikuti ujian kompetensi keahlian pada implementasi Jaringan LAN.</p>
+            <a href="d:\sertifikat kompetensi.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 px-3 py-2 rounded-lg transition">
+        <!-- Ikon PDF -->
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+        Lihat Bukti PDF ↗
+    </a>
+          </div>
+        </div>
+
+        <!-- UBAH DATA: Achievement Card 2 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:shadow-xl transition-all group">
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-500 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-certificate text-lg"></i>
+            </div>
+            <span class="text-xs font-semibold text-slate-400">Sertifikasi</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 group-hover:text-brand-600 transition-colors">Sertifikat Praktek Lapangan Kerja</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Menyelesaikan pelatihan sebagai siswa/staff magang ditempat Perusahaan Percetakan Kartu.</p>
+            <a href="d:\Sertifiat pkl.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 px-3 py-2 rounded-lg transition">
+        <!-- Ikon PDF -->
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+        </svg>
+        Lihat Bukti PDF ↗
+        </a>
+          </div>
+        </div>
+
+        <!-- UBAH DATA: Achievement Card 3 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:shadow-xl transition-all group">
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/40 text-indigo-500 flex items-center justify-center mb-4">
+              <i class="fa-solid fa-people-group text-lg"></i>
+            </div>
+            <span class="text-xs font-semibold text-slate-400">Organisasi</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 group-hover:text-brand-600 transition-colors">Diklat Tapak Suci</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Mengikuti pelatihan dan peneriman anggota baru tapak suci Putra Muhammadiyah .</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-100/70 dark:bg-slate-800/30 border-t border-slate-200 dark:border-slate-800 transition-colors">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Get In Touch</h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-3">Mari terhubung untuk diskusi, kolaborasi, atau sekadar menyapa!</p>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-8 items-start">
+          
+          <!-- Contact Info Column -->
+          <div class="md:col-span-5 space-y-6">
+            
+            <!-- Email -->
+            <a href="mailto:email.anda@email.com" class="p-5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/60 flex items-center gap-4 hover:border-brand-500 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block font-medium">Email</span>
+                <!-- UBAH DATA: Ganti Email Anda -->
+                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">udinraisya66@gmail.com</span>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/username" target="_blank" class="p-5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/60 flex items-center gap-4 hover:border-brand-500 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block font-medium">LinkedIn</span>
+                <!-- UBAH DATA: Ganti Username LinkedIn Anda -->
+                <span class="text-sm font-bold text-slate-800 dark:text-slate-200">linkedin.com/in/au-raisyaidin-ilham-ramadhan</span>
+              </div>
+            </a>
+
+            <!-- Download CV Button -->
+            <div class="p-6 bg-gradient-to-br from-brand-600 to-indigo-700 text-white rounded-2xl shadow-lg">
+              <h4 class="font-bold text-lg mb-2">Ingin Salinan Curriculum Vitae?</h4>
+              <p class="text-sm text-brand-100 mb-4">Unduh resume saya untuk melihat riwayat lengkap akademis dan keahlian.</p>
+              <!-- UBAH DATA: Tambahkan link file CV Anda pada href -->
+              <a href="c:\Users\dani\Downloads\Au Raisyaidin Ilham Ramadhan-resume.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2.5 bg-white text-brand-700 hover:bg-brand-50 font-bold rounded-xl text-sm transition-all shadow-md">
+                <i class="fa-solid fa-download"></i> Unduh CV Saya
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="md:col-span-7 bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Kirim Pesan</h3>
+            <form id="contact-form" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah terkirim.');" class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Nama Lengkap</label>
+                <input type="text" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Email</label>
+                <input type="email" required placeholder="nama@email.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Pesan</label>
+                <textarea rows="4" required placeholder="Tuliskan pesan Anda di sini..." class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm"></textarea>
+              </div>
+              <button type="submit" class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl transition-all shadow-md shadow-brand-500/20">
+                Kirim Pesan
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-8 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm text-slate-500 dark:text-slate-400">
+      <p>© 2026 Portofolio Pribadi. Dibuat dengan Tailwind CSS &amp; HTML.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme Toggle Logic (Dark/Light mode)
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    // Cek preferensi tema sistem atau lokal
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      lightIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      darkIcon.classList.remove('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', function() {
+      darkIcon.classList.toggle('hidden');
+      lightIcon.classList.toggle('hidden');
+
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Tutup mobile menu saat link diklik
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
+
+  
